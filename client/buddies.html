@@ -22,13 +22,15 @@
       </div>
       <div class="panel left">
         <h1>Your Ribbit Buddies</h1>
+        {{#each ribbits}}
         <div class="ribbitWrapper">
           <img class="avatar" src="gfx/user2.png">
-          <span class="name">Kermit</span> @username <span class="time">15m</span>
+          <span class="name">{{buddyFullName user_id}}</span> @{{buddyUserName user_id}} <span class="time">15m</span>
           <p>
-            Cras justo odio, dapibus ac facilisis in, egestas Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. <a href="#">http://net.tutsplus.com/tutorials/php/ ...</a>
+            {{ribbit}}
           </p>
         </div>
+        {{/each}}
       </div>
     </div>
   </div>
